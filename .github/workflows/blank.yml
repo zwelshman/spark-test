@@ -39,7 +39,7 @@ jobs:
 
       - run: |
           pip install pyspark
-          pip install pandas matplotlib seaborn
+          pip install pandas matplotlib seaborn notebook
       
       - name: execute py script # run the run.py to get the latest data
         run: |
