@@ -23,14 +23,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Setup Apache Spark
-    
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: vemonet/setup-spark@v1
+        uses: vemonet/setup-spark@v1
         with: 
           spark-version: '2.4.5'
-          # Hadoop version
-          hadoop-version: '3.2' # optional, default is 3.2
-          # Directly provide the URL to download the Spark binary compressed as .tgz
          
       # Runs a single command using the runners shell
       - name: Run a one-line script
