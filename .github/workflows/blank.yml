@@ -28,7 +28,6 @@ jobs:
         with: 
           spark-version: '2.4.5'
           py4j-version: '0.10.7'
-        
          
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -39,3 +38,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+      - name: Run a notebook
+        uses: yaananth/run-notebook@v1
+        with:
+          notebook: "./tests/test_colorectal.ipynb"
+ 
+      
+      
+      
