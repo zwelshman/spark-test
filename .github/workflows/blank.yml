@@ -41,7 +41,7 @@ jobs:
           
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: conda install pyspark,pandas,matplotlib,seaborn
+        run: conda install pyspark pandas matplotlib seaborn
       
       - name: execute py script # run the run.py to get the latest data
         run: |
