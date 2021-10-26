@@ -14,7 +14,7 @@ from functools import reduce
 # In[2]:
 
 
-get_ipython().run_line_magic('run', "'../src/cancer_utilies.ipynb'")
+get_ipython().run_line_magic('run', 'src/cancer_utilies.py')
 
 
 # In[3]:
