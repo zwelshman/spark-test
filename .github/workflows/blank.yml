@@ -38,7 +38,7 @@ jobs:
           py4j-version: '0.10.7'
 
       - run: |
-          pip install pyspark
+          pip install pyspark=2.4.5
           pip install pandas matplotlib seaborn notebook
       
       - name: execute py script # run the run.py to get the latest data
