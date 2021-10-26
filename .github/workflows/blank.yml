@@ -25,7 +25,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.7.3' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          python-version: '3.7' # Version range or exact version of a Python version to use, using SemVer's version range syntax
           architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
           
       - uses: actions/setup-java@v1
@@ -37,14 +37,9 @@ jobs:
           spark-version: '2.4.5'
           py4j-version: '0.10.7'
 
-    #  - run: spark-submit --version
-          
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: conda install pyspark==2.4.5
-        
-      - name: install other packages
-        run: conda install pandas matplotlib seaborn
+      - run: |
+          conda install pyspark==2.4.5
+          conda install pandas matplotlib seaborn
       
       - name: execute py script # run the run.py to get the latest data
         run: |
