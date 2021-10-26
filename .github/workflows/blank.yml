@@ -43,7 +43,7 @@ jobs:
       
       - name: execute py script # run the run.py to get the latest data
         run: |
-          python tests/test_colorectal.py
+          ipython tests/test_colorectal.py
 
  
       
