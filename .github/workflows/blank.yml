@@ -37,7 +37,7 @@ jobs:
           spark-version: '2.4.5'
           py4j-version: '0.10.7'
 
-      - run: spark-submit --version
+    #  - run: spark-submit --version
           
       # Runs a single command using the runners shell
       - name: Run a one-line script
