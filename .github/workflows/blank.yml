@@ -18,7 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: datamechanics/spark:2.4.5-latest@v1
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -33,7 +33,7 @@ jobs:
           java-version: '11'
 
       - run: |
-          pip install pandas matplotlib seaborn notebook
+          pip install pandas matplotlib seaborn notebook pyspark=2.4.5
       
       - name: execute py script # run the run.py to get the latest data
         run: |
