@@ -33,7 +33,7 @@ jobs:
           java-version: '11'
 
       - run: |
-          pip install pandas matplotlib seaborn notebook pyspark=2.4.5
+          pip install pandas matplotlib seaborn notebook pyspark==2.4.5
       
       - name: execute py script # run the run.py to get the latest data
         run: |
