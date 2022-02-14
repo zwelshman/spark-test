@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 import pyspark
 import pyspark.sql.functions as F
 from pyspark.sql import SparkSession
 import pandas as pd
 from functools import reduce
+
+from IPython import get_ipython
+
 
 
 # In[2]:
