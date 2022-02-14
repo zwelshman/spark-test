@@ -22,8 +22,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v1
+      - uses: actions/setup-python@v1
         with:
           python-version: '3.7.5' # Version range or exact version of a Python version to use, using SemVer's version range syntax
           architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
@@ -32,13 +32,9 @@ jobs:
         with:
           java-version: '11'
 
-      - uses: vemonet/setup-spark@v1
-        with:
-          spark-version: '2.4.5'
-          py4j-version: '0.10.7'
+      - uses: datamechanics/spark:2.4.5-latest@v1
 
       - run: |
-          pip install pyspark==2.4.5
           pip install pandas matplotlib seaborn notebook
       
       - name: execute py script # run the run.py to get the latest data
