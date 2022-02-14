@@ -28,11 +28,12 @@ def test_colo():
 
         #Create PySpark DataFrame from Pandas
         sparkDF=spark.createDataFrame(pandasDF) 
+        assert 10 == 10 
 
        
-        expected = sparkDF.collect()[0][0]
-        print( expected )
+#         expected = sparkDF.collect()[0][0]
+#         print( expected )
 #         actual = 1
         
         
-        assert 10 == 10 
+     
