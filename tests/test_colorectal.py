@@ -12,7 +12,7 @@ from functools import reduce
 # initialize sparksession
 spark = SparkSession.builder.appName('app').getOrCreate()
 
-def test_df():
+def test_colo():
         # initialize sparksession
 #        spark = SparkSession.builder.appName('app').getOrCreate()
         # initialize list of lists
