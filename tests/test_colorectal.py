@@ -19,6 +19,9 @@ data = [['Rand1', 'C34,C18,C19', '2021-01-01'],
         ['Rand3', 'J12, C20', '2021-06-01'],
         ['Rand3', 'J12, C20', '2021-06-02'] ]
 # Create the pandas DataFrame
-df = pd.DataFrame(data, columns = ['dummy_name', 'dummy_condition','dummy_admis'])
+pandasDF = pd.DataFrame(data, columns = ['dummy_name', 'dummy_condition','dummy_admis'])
 
-df.show()
+#Create PySpark DataFrame from Pandas
+sparkDF=spark.createDataFrame(pandasDF) 
+sparkDF.printSchema()
+sparkDF.show()
